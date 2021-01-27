@@ -5,7 +5,6 @@ def another_thread(loop):
     timeout = 1
     # Create a coroutine
     coro = asyncio.sleep(1, result=3)
-
     # Submit the coroutine to a given loop
     future = asyncio.run_coroutine_threadsafe(coro, loop)
 
