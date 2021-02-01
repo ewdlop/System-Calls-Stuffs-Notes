@@ -1,3 +1,12 @@
+#                  | Multi-args   Concurrence    Blocking     Ordered-results
+#---------------------------------------------------------------------
+#Pool.map          | no           yes            yes          yes
+#Pool.map_async    | no           yes            no           yes
+#Pool.apply        | yes          no             yes          no
+#Pool.apply_async  | yes          yes            no           no
+#Pool.starmap      | yes          yes            yes          yes
+#Pool.starmap_async| yes          yes            no           no
+
 from multiprocessing import Process
 import os
 
