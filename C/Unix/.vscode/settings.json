@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "socket": "c",
+        "*.tcc": "c",
+        "buffer": "c",
+        "io_context": "c",
+        "iosfwd": "c",
+        "istream": "c",
+        "limits": "c",
+        "sstream": "c",
+        "stop_token": "c",
+        "streambuf": "c",
+        "string.h": "c"
+    }
+}
