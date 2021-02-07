@@ -1,0 +1,3 @@
+﻿  Assembling main.asm...
+SmallWin.inc(11): warning A4011: multiple .MODEL directives found : .MODEL ignored
+  Window.vcxproj -> C:\Users\Ray\Desktop\Blazor\TheThreadingStuff\MASM\Window\Debug\Window.exe
