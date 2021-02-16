@@ -1,0 +1,88 @@
+s
+x86-64 gcc 10.2 -std=c++1z -fconcepts
+
+f(int, int, int, int):
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [rbp-4], edi
+        mov     DWORD PTR [rbp-8], esi
+        mov     DWORD PTR [rbp-12], edx
+        mov     DWORD PTR [rbp-16], ecx
+        mov     eax, DWORD PTR [rbp-4]
+        pop     rbp
+        ret
+main:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     ecx, 5
+        mov     edx, 3
+        mov     esi, 2
+        mov     edi, 2
+        call    f(int, int, int, int)
+        mov     DWORD PTR [rbp-4], eax
+        mov     eax, 0
+        leave
+        ret
+
+
+x64 msvc
+
+x$ = 8
+y$ = 16
+z$ = 24
+t$ = 32
+int f(int,int,int,int) PROC                                  ; f
+        mov     DWORD PTR [rsp+32], r9d
+        mov     DWORD PTR [rsp+24], r8d
+        mov     DWORD PTR [rsp+16], edx
+        mov     DWORD PTR [rsp+8], ecx
+        mov     eax, DWORD PTR x$[rsp]
+        ret     0
+int f(int,int,int,int) ENDP                                  ; f
+
+x$ = 32
+main    PROC
+$LN3:
+        sub     rsp, 56                             ; 00000038H
+        mov     r9d, 5
+        mov     r8d, 3
+        mov     edx, 2
+        mov     ecx, 2
+        call    int f(int,int,int,int)                     ; f
+        mov     DWORD PTR x$[rsp], eax
+        xor     eax, eax
+        add     rsp, 56                             ; 00000038H
+        ret     0
+main    ENDP
+
+x86 msvc
+ _x$ = 8                                       ; size = 4
+_y$ = 12                                                ; size = 4
+_z$ = 16                                                ; size = 4
+_t$ = 20                                                ; size = 4
+int f(int,int,int,int) PROC                                  ; f
+        push    ebp
+        mov     ebp, esp
+        mov     eax, DWORD PTR _x$[ebp]
+        pop     ebp
+        ret     0
+int f(int,int,int,int) ENDP                                  ; f
+
+_x$ = -4                                                ; size = 4
+_main   PROC
+        push    ebp
+        mov     ebp, esp
+        push    ecx
+        push    5
+        push    3
+        push    2
+        push    2
+        call    int f(int,int,int,int)                     ; f
+        add     esp, 16                             ; 00000010H
+        mov     DWORD PTR _x$[ebp], eax
+        xor     eax, eax
+        mov     esp, ebp
+        pop     ebp
+        ret     0
+_main   ENDP

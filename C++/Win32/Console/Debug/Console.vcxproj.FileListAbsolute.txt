@@ -1,0 +1,2 @@
+C:\Users\Ray\Desktop\Blazor\TheThreadingStuff\C++\Win32\Console\Debug\Console.exe
+C:\Users\Ray\Desktop\Blazor\TheThreadingStuff\C++\Win32\Console\Debug\Console.pdb
