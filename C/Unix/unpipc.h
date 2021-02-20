@@ -36,6 +36,9 @@
 # include	<sys/mman.h>	/* Posix shared memory */
 
 
+#include    <sys/ioctl.h>
+
+
 //vonzhou: error: storage size of ‘buf’ isn’t known (struct msgbuf )
 struct msgbuf{
 	long mtype;
