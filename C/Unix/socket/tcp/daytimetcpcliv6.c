@@ -1,10 +1,7 @@
-#include "../unp.h"
-#include "unistd.h"
-#include "string.h"
+#include "../../unp.h"
 #include "stdio.h"
 #include "stdlib.h"
 #include "netinet/ip.h"
-#include "arpa/inet.h"
 
 #define	MAXLINE		4096	/* max text line length */
 
