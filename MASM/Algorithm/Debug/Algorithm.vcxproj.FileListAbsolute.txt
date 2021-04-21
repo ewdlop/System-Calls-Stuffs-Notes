@@ -1,2 +1,0 @@
-C:\Users\Ray\Desktop\Blazor\TheThreadingStuff\MASM\Algorithm\Debug\Algorithm.exe
-C:\Users\Ray\Desktop\Blazor\TheThreadingStuff\MASM\Algorithm\Debug\Algorithm.pdb

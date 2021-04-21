@@ -1,2 +1,0 @@
-C:\Users\Ray\Desktop\Blazor\TheThreadingStuff\MASM\Window\Debug\Window.exe
-C:\Users\Ray\Desktop\Blazor\TheThreadingStuff\MASM\Window\Debug\Window.pdb

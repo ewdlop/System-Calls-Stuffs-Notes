@@ -1,2 +1,0 @@
-C:\Users\Ray\Desktop\Blazor\TheThreadingStuff\MASM\HeapAllocation\Debug\HeapAllocation.exe
-C:\Users\Ray\Desktop\Blazor\TheThreadingStuff\MASM\HeapAllocation\Debug\HeapAllocation.pdb
