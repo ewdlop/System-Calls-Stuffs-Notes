@@ -132,7 +132,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             switch (wmId)
             {
             case IDM_ABOUT:
-                DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                //DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                MessageBox(
+                    NULL,
+                    L"OK",
+                    L"Title",
+                    MB_ICONEXCLAMATION | MB_YESNO
+                );
                 break;
             case IDM_EXIT:
                 DestroyWindow(hWnd);
@@ -177,4 +183,22 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     }
     return (INT_PTR)FALSE;
+}
+
+
+int DisplayConfirmSaveAsMessageBox()
+{
+    int msgboxID = MessageBox(
+        NULL,
+        L"temp.txt already exists.\nDo you want to replace it?",
+        L"Confirm Save As",
+        MB_ICONEXCLAMATION | MB_YESNO
+    );
+
+    if (msgboxID == IDYES)
+    {
+        // TODO: add code
+    }
+
+    return msgboxID;
 }
