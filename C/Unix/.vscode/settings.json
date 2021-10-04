@@ -12,6 +12,7 @@
         "stop_token": "c",
         "streambuf": "c",
         "string.h": "c",
-        "in.h": "c"
+        "in.h": "c",
+        "internet": "c"
     }
 }
