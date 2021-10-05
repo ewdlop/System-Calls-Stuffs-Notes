@@ -148,10 +148,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arrays.cpp" />
+    <ClCompile Include="FunctionalProgramming.cpp" />
     <ClCompile Include="Hashtable.cpp" />
     <ClCompile Include="PrimitiveTypes.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FunctionalProgramming.h" />
     <ClInclude Include="Searching.h" />
     <ClInclude Include="Semaphore.h" />
   </ItemGroup>

@@ -24,12 +24,18 @@
     <ClCompile Include="Hashtable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FunctionalProgramming.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Searching.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Semaphore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionalProgramming.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
