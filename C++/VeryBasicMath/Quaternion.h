@@ -33,6 +33,7 @@ namespace MyMathFuncs
 		bool operator==(const Quaternion& rhs);
 		bool operator!=(const Quaternion& rhs);
 		Quaternion& operator=(const Quaternion& rhs);
+		//Quaternion& operator=(Quaternion&& rhs);
 		Quaternion& operator+=(const double& rhs);
 		Quaternion& operator+=(const Quaternion& rhs);
 		friend Quaternion operator+(const double& lhs, const Quaternion& rhs);
@@ -47,7 +48,11 @@ namespace MyMathFuncs
 		friend Quaternion operator*(const Quaternion& lhs, const Quaternion& rhs);
 		static double distance(const Quaternion& p, const Quaternion& q);
 		static double dot(const Quaternion& p, const Quaternion& q);
+		void cross(const Quaternion& rhs);
+		Quaternion& cross2(const Quaternion& rhs);
 		static Quaternion cross(const Quaternion& p, const Quaternion& q);
+		static Quaternion* cross_ptr(const Quaternion& p, const Quaternion& q);
+		static bool try_cross(const Quaternion& p, const Quaternion& q, Quaternion* r);
 		static double mixed(const Quaternion& p, const Quaternion& q, const Quaternion& r);
 		static Quaternion polar_to_Quaternion(const double& norm, const double& angle, const double& vx, const double& vy, const double& vz);
 		static Quaternion rotation_about_axis(const double& angle, const double& vx, const double& vy, const double& vz, const Quaternion& p);

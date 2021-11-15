@@ -17,6 +17,7 @@ namespace MyMathFuncs {
 	{
 		return Quaternion(0, b, c, d);
 	}
+
 	Quaternion Quaternion::imaginary() const
 	{
 		return Quaternion(0, b, c, d);
@@ -103,6 +104,14 @@ namespace MyMathFuncs {
 		d = rhs.d;;
 		return *this;
 	}
+	//Quaternion& Quaternion::operator=(Quaternion&& rhs)
+	//{
+	//	this->a = std::move(rhs.a);
+	//	this->b = std::move(rhs.b);
+	//	this->c = std::move(rhs.c);
+	//	this->d = std::move(rhs.d);
+	//	return *this;
+	//}
 
 	Quaternion& Quaternion::operator+=(const double& rhs)
 	{
@@ -189,9 +198,47 @@ namespace MyMathFuncs {
 		double n = 1 / 2.0;
 		return n * (p * (q.conjugation()) + q * p.conjugation()).real();
 	}
+
+	void Quaternion::cross(const Quaternion& q) {
+		double a = 0;
+		double b = this->c * q.d - q.c * this->d;
+		double c = q.b * this->d - this->b * q.d;
+		double d = this->b * q.c - q.b * this->c;
+		this->a = 0;
+		this->b = b;
+		this->c = c;
+		this->d = d;
+	}
+
+	Quaternion& Quaternion::cross2(const Quaternion& q) {
+		double a = 0;
+		double b = this->c * q.d - q.c * this->d;
+		double c = q.b * this->d - this->b * q.d;
+		double d = this->b * q.c - q.b * this->c;
+		this->a = 0;
+		this->b = b;
+		this->c = c;
+		this->d = d;
+		return *this;
+	}
+
 	Quaternion Quaternion::cross(const Quaternion& p, const Quaternion& q) {
 		return Quaternion(0, p.c * q.d - q.c * p.d, q.b * p.d - p.b * q.d, p.b * q.c - q.b * p.c);
 	}
+
+	//Quaternion* Quaternion::cross_ptr(const Quaternion& p, const Quaternion& q) {
+	//	return new Quaternion(0, p.c * q.d - q.c * p.d, q.b * p.d - p.b * q.d, p.b * q.c - q.b * p.c);
+	//}
+
+	bool Quaternion::try_cross(const Quaternion& p, const Quaternion& q, Quaternion* result)
+	{
+		result->a = 0;
+		result->b = p.c * q.d - q.c * p.d;
+		result->c = q.b * p.d - p.b * q.d;
+		result->d = p.b * q.c - q.b * p.c;
+		return true;
+	}
+
 	double Quaternion::mixed(const Quaternion& p, const Quaternion& q, const Quaternion& r) {
 		return dot(p, cross(q, r));
 	}
