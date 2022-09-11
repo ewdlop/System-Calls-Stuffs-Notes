@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{39858209-09eb-47ac-b902-4dbd6fcccff8}</ProjectGuid>
-    <RootNamespace>Threading</RootNamespace>
+    <ProjectGuid>{2ed2a1bf-886d-4d3a-a3e6-b5ede1bec90e}</ProjectGuid>
+    <RootNamespace>Basic</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,7 +104,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,19 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="InterruptibleThread.cpp" />
-    <ClCompile Include="Iterator.cpp" />
-    <ClCompile Include="JobSystem.cpp" />
-    <ClCompile Include="Threading.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="InterruptibleThread.h" />
-    <ClInclude Include="Iterator.h" />
-    <ClInclude Include="Job.h" />
-    <ClInclude Include="JobStealingQueue.h" />
-    <ClInclude Include="JobSystem.h" />
-    <ClInclude Include="JobThreadsJoiner.h" />
-    <ClInclude Include="ThreadSafeQueue.h" />
+    <ClCompile Include="Basic.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
