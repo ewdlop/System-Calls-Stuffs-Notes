@@ -1,6 +1,6 @@
 #include "LogicalProcessorInformation.h"
 
-namespace MyNamespace
+namespace MyLibrary
 {
     typedef BOOL(WINAPI* LPFN_GLPI)(
         PSYSTEM_LOGICAL_PROCESSOR_INFORMATION,

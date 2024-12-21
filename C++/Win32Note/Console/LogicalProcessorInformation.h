@@ -5,6 +5,7 @@
 
 namespace MyLibrary {
     DWORD CountSetBits(ULONG_PTR bitMask);
+	int LogicalProcessorInformation();
 }
 
 #endif
