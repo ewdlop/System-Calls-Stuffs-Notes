@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="BufferOverflow.cpp" />
     <ClCompile Include="example.c" />
+    <ClCompile Include="example.cpp" />
+    <ClCompile Include="InlineAssembly.cpp" />
     <ClCompile Include="LoadDLL.cpp" />
     <ClCompile Include="LogicalProcessorInformation.cpp" />
     <ClCompile Include="main.cpp" />
@@ -149,8 +151,11 @@
   <ItemGroup>
     <ClInclude Include="BufferOverflow.h" />
     <ClInclude Include="example.h" />
+    <ClInclude Include="InlineAssembly.h" />
+    <ClInclude Include="LoadDLL.h" />
     <ClInclude Include="LogicalProcessorInformation.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="ReadWriteMemory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

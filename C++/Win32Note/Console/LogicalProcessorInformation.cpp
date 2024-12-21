@@ -1,5 +1,4 @@
-#include "pch.h"
-using namespace MyNamespace;
+#include "LogicalProcessorInformation.h"
 
 namespace MyNamespace
 {
@@ -8,7 +7,7 @@ namespace MyNamespace
         PDWORD);
 
     // Helper function to count set bits in the processor mask.
-    DWORD CountSetBits(ULONG_PTR bitMask)
+    static DWORD CountSetBits(ULONG_PTR bitMask)
     {
         DWORD LSHIFT = sizeof(ULONG_PTR) * 8 - 1;
         DWORD bitSetCount = 0;
@@ -20,11 +19,13 @@ namespace MyNamespace
             bitSetCount += ((bitMask & bitTest) ? 1 : 0);
             bitTest /= 2; //shift right
         }
-
+        
         return bitSetCount;
     }
 
-    void LogicalProcessorInformation()
+	// Query the processor relationship and cache information.
+	// https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlogicalprocessorinformation
+    static int LogicalProcessorInformation()
     {
         LPFN_GLPI glpi;
         BOOL done = 0;
@@ -41,6 +42,8 @@ namespace MyNamespace
         DWORD byteOffset = 0;
         PCACHE_DESCRIPTOR Cache;
 
+
+        //GetLogicalProcessorInformation is not present on all systems, this example uses the GetProcAddress function instead of calling GetLogicalProcessorInformation directly.
         glpi = (LPFN_GLPI)GetProcAddress(
             GetModuleHandle(L"kernel32"),
             "GetLogicalProcessorInformation");
@@ -53,6 +56,7 @@ namespace MyNamespace
 
         while (!done)
         {
+            //BOOL result = GetLogicalProcessorInformation(buffer, &returnLength);
             DWORD rc = glpi(buffer, &returnLength);
 
             if (FALSE == rc)

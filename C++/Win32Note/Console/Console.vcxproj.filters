@@ -27,14 +27,23 @@
     <ClCompile Include="BufferOverflow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="example.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InlineAssembly.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BufferOverflow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="example.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -44,7 +53,13 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BufferOverflow.h">
+    <ClInclude Include="ReadWriteMemory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadDLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InlineAssembly.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
