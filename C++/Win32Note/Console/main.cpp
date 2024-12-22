@@ -1,5 +1,8 @@
 #include "pch.h"
 
+extern "C" long long add_numbers(long long a, long long b);
+
+
 int _tmain(int argc, wchar_t* argv[])
 {
     _tprintf(_T("Hello, World!\n"));

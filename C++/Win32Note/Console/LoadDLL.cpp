@@ -1,6 +1,6 @@
 #include "pch.h"
 
-namespace MyNamespace
+namespace MyLibrary
 {
     typedef int(__cdecl* MYPROC)(LPCWSTR);
 
