@@ -54,3 +54,17 @@ When a user application needs to perform an operation that requires higher privi
    ([Source: PhoenixNAP](https://phoenixnap.com/kb/system-call))
 
 This controlled interaction ensures that user applications cannot directly access critical system resources, maintaining system integrity and security.
+
+## Why Avoiding System call?
+
+Me: hardware dependent.
+
+## Why avoid standard library?
+
+Me: You are locked to vender
+
+## Why avoid Speficic Library?
+
+Me: People said that is premature optimization
+
+
